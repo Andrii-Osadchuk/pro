@@ -1,9 +1,8 @@
-let ololo = confirm('Start test with three favorit words!');
+let startExpression = confirm('Start test with three favorit words!');
 let word;
 let final = '';
 
-if(!ololo) alert('Try again!!!');
-if(ololo) {
+if(startExpression) {
 
     let numberOperation = 3;
 
@@ -20,21 +19,14 @@ if(ololo) {
 
                 for(let letter=0; letter<word.length; letter++) {
                     
-                    let letterAlone = word[letter]; // take simbol of index
+                    let letterAlone = word[letter];
 
-                    // console.log(letterAlone);
+                    let letterNumber = +word[letter];
 
-                    let letterNumber = +word[letter]; //nan - letter, number - number
-
-                    // console.log(letterNumber);
-
-                    let testNaNNumber = isNaN(letterNumber); // check if nan is true, if Number - false
-
-                    // console.log(testNaNNumber);
+                    let testNaNNumber = isNaN(letterNumber);
 
                     if(testNaNNumber === false) {
                         testWhile = true;
-                        // console.log(testWhile);
                     } 
                 }
             }
@@ -49,34 +41,62 @@ if(ololo) {
             fontKey = true;
 
             fontStyle = prompt(`Enter font style for word '${word}: uppercase or lowercase or capitalize`)
-            
+
             if(fontStyle) {
-                
+
                 fontStyle = fontStyle.trim();
                 fontStyle = fontStyle.toLowerCase();
 
-                if(fontStyle === 'uppercase') {
-                    fontKey = false;
-                    word = word.toUpperCase();
-                } else if(fontStyle === 'lowercase') {
-                    fontKey = false;
-                    word = word.toLowerCase();
-                } else if(fontStyle === 'capitalize') {
-                    fontKey = false;
-                    word = word[0].toUpperCase() + word.slice(1);
-                }
+                switch(fontStyle) {
+                    case 'uppercase':
+                        fontKey = false;
+                        word = word.toUpperCase();
+                        break;
+
+                    case 'lowercase':
+                        fontKey = false;
+                        word = word.toLowerCase();
+                        break;
+
+                    case 'capitalize':
+                        fontKey = false;
+                        word = word[0].toUpperCase() + word.slice(1);
+                        break;
+                }        
             }
-        } while(fontKey);
+        } while (fontKey)
+
+        // do {
+
+        //     fontKey = true;
+
+        //     fontStyle = prompt(`Enter font style for word '${word}: uppercase or lowercase or capitalize`)
+            
+        //     if(fontStyle) {
+                
+        //         fontStyle = fontStyle.trim();
+        //         fontStyle = fontStyle.toLowerCase();
+
+        //         if(fontStyle === 'uppercase') {
+        //             fontKey = false;
+        //             word = word.toUpperCase();
+        //         } else if(fontStyle === 'lowercase') {
+        //             fontKey = false;
+        //             word = word.toLowerCase();
+        //         } else if(fontStyle === 'capitalize') {
+        //             fontKey = false;
+        //             word = word[0].toUpperCase() + word.slice(1);
+        //         }
+        //     }
+        // } while(fontKey);
 
         final += word; // concat word1 + word2 + word3 => one long word
-
-        // console.log(final);
-
-        if(operation === numberOperation) {
-            final += '';
-        } else {
-            final += ' ';
-        }
+        final += operation === numberOperation ? `!` : ` `;
+        // if(operation === numberOperation) {
+        //     final += '';
+        // } else {
+        //     final += ' ';
+        // }
     }
 }
 
