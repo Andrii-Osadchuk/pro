@@ -1,15 +1,3 @@
-// document.write(`
-// <h1 style = "color: rgb(255, 0,0)"> Menu </h1> ♥ ♥ ♥
-// <h2> Fast FOOD </h2>`);
-
-// document.write(`
-//     <ol>
-//         <li> Gamburger </li>
-//         <li> Chisburger </li>
-//         ${addFood ? `<li> DoubleChees menu </li>` : ''}
-//     </ol>
-// `);
-
 const hamburger = 20,
     cheeseburger = 30,
     doubleCheese = 5,
@@ -40,7 +28,7 @@ let chooseMenuCheese;
 // debugger;
 if(food === 'cheeseburger') {
 
-    chooseMenuCheese = confirm(`Would you like double cheese?`);
+    chooseMenuCheese = confirm(`Would you like double cheese?`);git 
     if(chooseMenuCheese) {
         chooseMenuCheese === 'doubleCheese';
         totalCoast = ((cheeseburger + doubleCheese));
