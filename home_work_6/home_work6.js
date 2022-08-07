@@ -28,7 +28,7 @@ let chooseMenuCheese;
 // debugger;
 if(food === 'cheeseburger') {
 
-    chooseMenuCheese = confirm(`Would you like double cheese?`);git 
+    chooseMenuCheese = confirm(`Would you like double cheese?`);
     if(chooseMenuCheese) {
         chooseMenuCheese === 'doubleCheese';
         totalCoast = ((cheeseburger + doubleCheese));
