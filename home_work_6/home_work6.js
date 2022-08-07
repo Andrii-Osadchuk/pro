@@ -41,7 +41,6 @@ let chooseMenuCheese;
 if(food === 'cheeseburger') {
 
     chooseMenuCheese = confirm(`Would you like double cheese?`);
-
     if(chooseMenuCheese) {
         chooseMenuCheese === 'doubleCheese';
         totalCoast = ((cheeseburger + doubleCheese));
@@ -102,14 +101,14 @@ document.write(`<h1 style = 'color: rgb(150,0,0)'> MENU </h1>
 
 document.write(`<h3 style = 'color: rgb(0,0,255')> Your order: </h3>
 <ul>
-    ${food === 'cheeseburger' ? `<li> Bulka: Cheeseburger - ${cheeseburger} $</li>` : ''}
-    ${food === 'hamburger' ? `<li> Bulka: Hamburger - ${hamburger} $</li>` : ''}
-    ${chooseMenuCheese ? `<li>    + double Cheese - ${doubleCheese} $</li>` : ''}
-    ${potatoSize === 'small' ? `<li> Potato: Small size - ${potatoSmall} $</li>` : ''}
-    ${potatoSize === 'middle' ? `<li> Potato: Middle size - ${potatoMiddle} $</li>` : ''}
-    ${potatoSize === 'big' ? `<li> Potato: Big size - ${potatoBig} $</li>` : ''}
-    ${sauce === 'mayonnaise' || sauce == '2' ? `<li> Sauce: Mayonnaise - ${sauceMayonnaise} $</li>` : ''}
-    ${sauce === `ketchup`? `<li> Sauce: Ketchup - ${sauceKetchup} $</li>` : ''}
+    ${food === 'cheeseburger' ? `<li> Bulka 🍔: Cheeseburger - ${cheeseburger} $</li>` : ''}
+    ${food === 'hamburger' ? `<li> Bulka 🍔: Hamburger - ${hamburger} $</li>` : ''}
+    ${chooseMenuCheese ? `<li>   + double Cheese 🧀🧀 - ${doubleCheese} $</li>` : ''}
+    ${potatoSize === 'small' ? `<li> Potato 🍟: Small size - ${potatoSmall} $</li>` : ''}
+    ${potatoSize === 'middle' ? `<li> Potato 🍟: Middle size - ${potatoMiddle} $</li>` : ''}
+    ${potatoSize === 'big' ? `<li> Potato 🍟: Big size - ${potatoBig} $</li>` : ''}
+    ${sauce === 'mayonnaise' || sauce == '2' ? `<li> Sauce 🧂: Mayonnaise - ${sauceMayonnaise} $</li>` : ''}
+    ${sauce === `ketchup`? `<li> Sauce 🧂: Ketchup - ${sauceKetchup} $</li>` : ''}
 </ul>
 
 <p style = 'color: rgb(255,0,0)'> Total price: ${totalCoast} $ </p>
