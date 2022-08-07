@@ -81,5 +81,3 @@ if(ololo) {
 }
 
 console.log(`total word - ❤ ${final} ❤`);
-    
-    
