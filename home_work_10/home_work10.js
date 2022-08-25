@@ -1,4 +1,4 @@
-const animals = [
+const animals = [1,
 	['🐭','mouse','Jerry'],
 	['🐹','hamster','Biscuit'],
 	['🐰','rabbit','Bugs'],
@@ -20,11 +20,11 @@ const universes = [
 ];
 
 const getInfo = (list, listName) => {
-
 	let trr = [];
-	let listInner = [];
 	let title = listName;
 	for(let i=0; i<list.length; i++){
+		
+		let listInner = [];
 
 		if(Array.isArray(list[i])) {
 			
@@ -32,11 +32,55 @@ const getInfo = (list, listName) => {
 				listInner += `<td>${list[i][y]}</td>`;
 			}
 		}
-
+		// console.log(listInner);
 		trr.push(`<tr>${listInner}</tr>`);
+		// console.log(trr);
 	}
 	
-	document.write(`<caption>${title} info</caption><table>${trr.join(``)}</table>`);
+	document.write(`<div>${title} info</div><table>${trr.join('')}</table><br>`);
 }
 
 getInfo(animals, 'Animals');
+
+const getInfo2 = (list, listName) => {
+	let trr = [];
+	let title = listName;
+	for(let i=0; i<list.length; i++){
+		
+		let listInner = [];
+
+		if(Array.isArray(list[i])) {
+			
+			for(let y=0; y<list[i].length; y++) {
+				listInner += `<td>${list[i][y]}</td>`;
+			}
+		}
+		trr.push(`<tr>${listInner}</tr>`);
+	}
+	
+	document.write(`<div>${title} info</div><table>${trr.join('')}</table><br>`);
+}
+
+getInfo2(food, 'Food');
+
+const getInfo3 = (list, listName) => {
+	let trr = [];
+	let title = listName;
+	for(let i=0; i<list.length; i++){
+		
+		let listInner = [];
+
+		if(Array.isArray(list[i])) {
+			
+			for(let y=0; y<list[i].length; y++) {
+				listInner += `<td>${list[i][y]}</td>`;
+			}
+		}
+		trr.push(`<tr>${listInner}</tr>`);
+	}
+	
+	document.write(`<div>${title} info</div><table>${trr.join('')}</table><br>`);
+}
+
+getInfo3(universes, 'Universes');
+
