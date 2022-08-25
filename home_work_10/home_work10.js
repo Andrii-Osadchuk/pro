@@ -37,7 +37,7 @@ const getInfo = (list, listName) => {
 		// console.log(trr);
 	}
 	
-	document.write(`<div>${title} info</div><table>${trr.join('')}</table><br>`);
+	document.write(`<table><caption>${title} info</caption>${trr.join('')}</table><br>`);
 }
 
 getInfo(animals, 'Animals');
@@ -58,7 +58,7 @@ const getInfo2 = (list, listName) => {
 		trr.push(`<tr>${listInner}</tr>`);
 	}
 	
-	document.write(`<div>${title} info</div><table>${trr.join('')}</table><br>`);
+	document.write(`<table><caption>${title} info</caption>${trr.join('')}</table><br>`);
 }
 
 getInfo2(food, 'Food');
@@ -69,17 +69,26 @@ const getInfo3 = (list, listName) => {
 	for(let i=0; i<list.length; i++){
 		
 		let listInner = [];
-
+		let lastArr =[];
 		if(Array.isArray(list[i])) {
-			
+
 			for(let y=0; y<list[i].length; y++) {
-				listInner += `<td>${list[i][y]}</td>`;
+				
+				if(Array.isArray(list[i][y])) {
+					
+					for(let x=0; x<list[i][y].length; x++){
+						lastArr.push(`${list[i][y][x]}`);
+					}
+				}
+				else {
+					listInner += `<td>${list[i][y]}</td>`;
+				}
 			}
-		}
-		trr.push(`<tr>${listInner}</tr>`);
+ 		}
+		trr.push(`<tr>${listInner}<td>${lastArr.join('; ')}</td></tr>`);
 	}
 	
-	document.write(`<div>${title} info</div><table>${trr.join('')}</table><br>`);
+	document.write(`<table><caption>${title} info</caption>${trr.join('')}</table><br>`);
 }
 
 getInfo3(universes, 'Universes');
